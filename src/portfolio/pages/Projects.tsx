@@ -26,6 +26,13 @@ const projects: Project[] = [
       "Operational tooling that orchestrates on-call workflows, automates runbooks, and surfaces SLO regressions.",
     url: "https://example.com/waypoint",
     stack: ["Express", "PostgreSQL", "GraphQL", "React"]
+  },
+  {
+    name: "Blockchain Vision",
+    description:
+      "Insight platform that visualizes on-chain flows, flags anomalous wallets, and powers compliance reporting.",
+    url: "https://github.com/NolanKiwi/profile/",
+    stack: ["Next.js", "TypeScript", "Web3.js", "TailwindCSS"]
   }
 ];
 

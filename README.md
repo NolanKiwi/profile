@@ -2,6 +2,15 @@
 
 Vite + React + TypeScript + Tailwind single-page portfolio with Home, About, Projects, and Contact sections.
 
+## Live Links
+
+- Production origin: https://nolank.duckdns.org/profile/
+- GitHub case study: https://github.com/NolanKiwi/profile/
+
+## Featured Project
+
+- **Blockchain Vision** – Insight platform that visualizes on-chain flows, flags anomalous wallets, and powers compliance reporting. The in-app "View case study" button links directly to the GitHub repository above.
+
 ## Prerequisites
 
 - Node.js 18+
@@ -75,11 +84,11 @@ TailwindCSS powers the design system. Global directives live in `src/index.css`,
 
 ### Push to GitHub
 
-1. Create a repository on GitHub (replace `YOUR_ORG/YOUR_REPO` with the real path).
+1. Create (or reuse) the GitHub repository at `github.com/NolanKiwi/profile`.
 2. Add it as a remote and push the current branch:
    ```bash
    git init
-   git remote add origin git@github.com:YOUR_ORG/YOUR_REPO.git
+   git remote add origin git@github.com:NolanKiwi/profile.git
    git add .
    git commit -m "chore: initial commit"
    git push -u origin main
@@ -89,14 +98,14 @@ TailwindCSS powers the design system. Global directives live in `src/index.css`,
 
 ```bash
 cd /var/www
-sudo git clone git@github.com:YOUR_ORG/YOUR_REPO.git my-site
-cd my-site
+sudo git clone git@github.com:NolanKiwi/profile.git portfolio-site
+cd portfolio-site
 ```
 
 Pull the latest changes when redeploying:
 
 ```bash
-cd /var/www/my-site
+cd /var/www/portfolio-site
 sudo git pull origin main
 ```
 
@@ -115,7 +124,7 @@ The compiled assets are written to `dist/`.
 
 1. Copy the freshly built assets to the web root:
    ```bash
-   sudo cp -r dist /var/www/my-site/
+   sudo cp -r dist /var/www/portfolio-site/
    ```
 2. Copy `config/nginx.conf` from this repo to `/etc/nginx/sites-available/profile`.
 3. Enable the site and reload Nginx:
@@ -125,4 +134,4 @@ The compiled assets are written to `dist/`.
    sudo systemctl reload nginx
    ```
 
-Requests to `https://nolank.duckdns.org/profile` will now resolve to the SPA entry point (`/var/www/my-site/dist/index.html`). Reloading after each deployment picks up the latest static bundle.
+Requests to `https://nolank.duckdns.org/profile/` will now resolve to the SPA entry point (`/var/www/portfolio-site/dist/index.html`). Reloading after each deployment picks up the latest static bundle.
